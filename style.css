@@ -1,0 +1,318 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.like-btn, .comment-btn, .share-btn {
+    background-color: var(--button-background);
+    color: var(--button-text);
+}
+.sidebar {
+    width: 150px; /* 初始宽度 */
+    background-color: #3B3939;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease; /* 添加过渡效果 */
+}
+
+.sidebar:hover {
+    width: 200px; /* 鼠标靠近时的宽度 */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .nav-item {
+    padding: 15px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+.sidebar .nav-item:hover {
+    background-color: #555;
+}
+
+.sidebar .nav-item.active {
+    background-color: #555;
+}
+
+.main-content {
+    margin-left: 200px; /* 主内容区域跟随侧边栏宽度变化 */
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s ease; /* 添加过渡效果 */
+    height: 100vh; /* 确保主内容区域的高度 */
+    overflow: auto; /* 如果内容超过高度，允许滚动 */
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: left;
+    margin-left: 75px;
+    color: #333;
+    transition: font-size 0.3s ease; /* 添加过渡效果 */
+}
+h1:hover {
+    font-size: 3em; /* 鼠标悬停时标题放大 */
+}
+.logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 1000px;
+    height: auto;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: center;
+    color: #666;
+}
+
+.hidden {
+    display: none;
+}
+.article {
+    margin-bottom: 20px;
+    margin-left: 90px; /* 主内容区域跟随侧边栏宽度变化 */
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+    width: calc(50% - 10px); /* 计算每个预览的宽度，使两个预览在一行中并排显示 */
+    background-color: #c4c4c4;
+    padding: 10px;
+    border-radius: 9px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* 添加手型光标 */
+}
+
+.article:hover {
+    background-color: #dadada; /* 鼠标悬停时的背景颜色 */
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+}
+
+.article h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.article p {
+    font-size: 1em;
+    color: #666;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 设置文章预览之间的间距 */
+}
+
+.article-preview {
+    width: calc(50% - 10px); /* 计算每个预览的宽度，使两个预览在一行中并排显示 */
+    background-color: #dadada;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-preview img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* 图片底部留出一些空间 */
+    align: middle;
+}
+
+.article-preview h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.article-preview p {
+    font-size: 1em;
+    color: #666;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.article-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.article:hover .article-image {
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+}
+
+
+
+/*community*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* 调整字体大小 */
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.date {
+    color: #666;
+}
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-size: 2em;
+    color: #333;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.stat {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.stat .value {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.stat .label {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.profile-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.post {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.post:hover {
+    transform: scale(1.02);
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.caption {
+    margin-bottom: 10px;
+    font-size: 1.1em; /* 调整字体大小 */
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around; /* 按钮之间均匀分布，没有空隙 */
+    align-items: center; /* 垂直居中按钮 */
+}
+
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.like-btn {
+    background-color: #f06292;
+    color: #fff;
+}
+
+.like-btn:hover {
+    background-color: #ec407a;
+}
+
+.comment-btn {
+    background-color: #64b5f6;
+    color: #fff;
+}
+
+.comment-btn:hover {
+    background-color: #42a5f5;
+}
+
+.share-btn {
+    background-color: #81c784;
+    color: #fff;
+}
+
+.share-btn:hover {
+    background-color: #66bb6a;
+}
+
+/*profle*/
